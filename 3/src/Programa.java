@@ -9,15 +9,15 @@ public class Programa {
 		
 		veiculo1.setAno(2010);
 		veiculo1.setCapacidadeCarga(2000);
-		veiculo1.setKmInicial(0);
+		veiculo1.setKmInicial(5000);
 		veiculo1.setKmFinal(10000);
 		veiculo1.setChassi("AW92JS031A0S120MDAS0312N");
 		veiculo1.setMarca("Fiat");
 		veiculo1.setPlaca("AWK9201");
 		veiculo1.setModelo("Gran Siena");
-		veiculo1.setValorKmRodado(5000);
-		veiculo1.setValorLocacao(500);
+		veiculo1.setValorKmRodado(100);
 		veiculo1.setProprietario(pessoa1);
+		veiculo1.calcularValorLocacao();
 		
 		System.out.println(veiculo1);
 		System.out.println(veiculo2);

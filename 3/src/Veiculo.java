@@ -3,9 +3,9 @@ public class Veiculo {
 	private String marca;
 	private String modelo;
 	private int ano;
-	private int valorKmRodado;
-	private int kmInicial;
-	private int kmFinal;
+	private double valorKmRodado;
+	private double kmInicial;
+	private double kmFinal;
 	private double valorLocacao;
 	private String chassi;
 	private Pessoa proprietario;
@@ -20,11 +20,16 @@ public class Veiculo {
 		this.valorKmRodado = valorKmRodado;
 		this.kmInicial = kmInicial;
 		this.kmFinal = kmFinal;
-		this.valorLocacao = valorLocacao;
 		this.chassi = chassi;
 		this.proprietario = proprietario;
+		this.valorLocacao = valorLocacao;
+		this.calcularValorLocacao();
 	}
 
+	public void calcularValorLocacao(){
+		this.valorLocacao = ( this.kmInicial - this.kmFinal ) * this.valorKmRodado;
+	}
+	
 	public String getPlaca() {
 		return placa;
 	}
@@ -57,7 +62,7 @@ public class Veiculo {
 		this.ano = ano;
 	}
 
-	public int getValorKmRodado() {
+	public double getValorKmRodado() {
 		return valorKmRodado;
 	}
 
@@ -65,7 +70,7 @@ public class Veiculo {
 		this.valorKmRodado = valorKmRodado;
 	}
 
-	public int getKmInicial() {
+	public double getKmInicial() {
 		return kmInicial;
 	}
 
@@ -73,7 +78,7 @@ public class Veiculo {
 		this.kmInicial = kmInicial;
 	}
 
-	public int getKmFinal() {
+	public double getKmFinal() {
 		return kmFinal;
 	}
 
